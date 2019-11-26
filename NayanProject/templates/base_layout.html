@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Visitors Diary
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="{% static 'app.css' %}">
+    </head>
+
+    <body>
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                 <a href="{% url 'index' %}" class="item">Home</a>
+                 <a href={% url 'new' %} class="item">New Visitor </a>
+				 <a href={% url 'checkout' %} class="item">Check-Out  </a>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

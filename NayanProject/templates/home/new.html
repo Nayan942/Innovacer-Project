@@ -1,0 +1,71 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<script>
+	function checkTime(theForm){
+		if(theForm.visitor[checkInTime].value < theForm.time2.value){
+			return true;
+		}
+		else{
+			alert("invalid time"); 
+			return false;
+		}
+	}
+</script>
+
+<div class="ui main text container segment">
+<br>
+    <div class="ui huge header">
+        New Visitor
+    </div>
+    <form class="ui form" action="/new" method="POST">
+		{% csrf_token %}
+        <div class="field">
+            <label>Host Name</label>
+            <input type="text" required name="hostName" placeholder="whom do you want to meet?">  
+        </div>
+
+        <div class="field">
+            <label>Host Email</label>
+            <input type="email" required name="hostEmail" placeholder="email adress of host">  
+        </div>
+
+        <div class="field">
+            <label>Host Phone no.</label>
+            <input type="tel" required name="hostPhoneNo" placeholder="phone no of host">  
+        </div>
+
+        <div class="field">
+            <label>Host Adress</label>
+            <input type="text" required name="hostAdress" placeholder="adress of host">  
+        </div>
+
+        <div class="field">
+            <label>Visitor Name</label>
+            <input type="text" name="visitorName" placeholder="your name">  
+        </div>
+
+        <div class="field">
+            <label>Visitor Email</label>
+            <input type="email" required name="visitorEmail" placeholder="your email">  
+        </div>
+
+        <div class="field">
+            <label>Visitor Phone No.</label>
+            <input type="tel" required name="visitorPhoneNo" placeholder="your phone no.">  
+        </div>
+
+        <div class="field">
+            <label>Visitor Adress</label>
+            <input type="text" required name="visitorAdress" placeholder="your Adress">  
+        </div>
+
+        <div class="ui basic segment">
+            <input class="ui basic blue button" type="submit">
+        </div>
+        
+    </form>
+</div>
+
+{% endblock %}

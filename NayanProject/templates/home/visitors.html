@@ -1,0 +1,24 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<div class="ui main text container segment">
+<br>
+<div class="ui huge header">
+        Visitors of {{host}} 
+</div>
+	{% for visitor in visitors %}
+	<fieldset>
+			<legend>{{visitor.visitorName}}</legend>
+			email:{{visitor.visitorEmail}}<br>
+			no:{{visitor.visitorPhoneNo}}<br>
+			address:{{visitor.visitorAdress}}<br>
+			inTime:{{visitor.checkinTime}}<br>
+			outTime:{{visitor.checkoutTime}}<br>
+	</fieldset>
+	{% endfor %}
+	
+</div>
+
+
+{% endblock %}
