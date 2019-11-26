@@ -1,2 +1,6 @@
 # Innovacer-Projct
-An entry data management soft\ware
+A data entry and management software
+
+    This is one data entry management software where visitor can enter his detail as well as host's detail(with whom he wants to meet)  the moment he submits this details host will get one mail from our server about the detail of the visitor with check-in time which is automatically picked by my code(check-in time is the time when visitors submit the entry). Then, after meeting there is one option for checkout where a visitor will write the name of the host whom he visited and checkout time will be automatically taken by the server. Then he submits the form and the visitor will get mail about meeting detail like hostname, address, phone no, etc. This meeting detail will be saved on the database automatically. so that A host can also check the list of visitors on the website. I am currently working on the CSS of the site because i want to add some more features but because of lack of time(I had an exam during submission week). also, I was trying to use node.js in backend but because of some error, I had to change it to Jango (lack of time to solve errors).
+    For this project, I have used javascript, HTML, and CSS for frontend, while for backend I have used Django,python. The Database I am using is MongoDB.
+   
